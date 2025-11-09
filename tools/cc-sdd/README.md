@@ -36,14 +36,11 @@ Install cc-sdd as a Claude plugins marketplace for modular, standards-compliant 
 # Add the cc-sdd marketplace
 claude /plugin marketplace add https://github.com/gotalab/cc-sdd
 
-# Install specific plugins for your AI agent
-claude /plugin install cc-sdd-claude-code     # For Claude Code
-claude /plugin install cc-sdd-claude-agent    # For Claude Code SubAgents
-claude /plugin install cc-sdd-cursor          # For Cursor IDE
-claude /plugin install cc-sdd-gemini          # For Gemini CLI
-claude /plugin install cc-sdd-codex           # For Codex CLI
-claude /plugin install cc-sdd-copilot         # For GitHub Copilot
-claude /plugin install cc-sdd-qwen            # For Qwen Code
+# Install the available plugin(s)
+claude /plugin install cc-sdd-claude-code     # Claude Code plugin
+
+# Additional agent installers are currently CLI-only via `npx cc-sdd`
+# (see Option 2 below for per-agent CLI flags)
 ```
 
 ### Option 2: Traditional CLI Installation
@@ -149,6 +146,8 @@ cc-sdd now follows the official Claude plugins specification, providing a market
 - **Easy Updates**: Marketplace-based distribution enables seamless updates
 - **Plugin Isolation**: Each agent type is a separate plugin with its own settings and commands
 
+> **Current availability**: The initial marketplace release publishes the `cc-sdd-claude-code` plugin. Other agents continue to install through the CLI until their plugin manifests are finalized.
+
 ### Marketplace Installation
 
 ```bash
@@ -166,17 +165,17 @@ claude /plugin install cc-sdd-claude-code
 
 ## 🤖 Supported AI Agents
 
-| Agent | Status | Plugin | Commands |  |
-|-------|--------|--------|----------|--------|
-| **Claude Code** | ✅ Full | `cc-sdd-claude-code` | 11 slash commands | `CLAUDE.md` |
-| **Claude Code SubAgents** | ✅ Full | `cc-sdd-claude-agent` | 12 commands + 9 subagents | `CLAUDE.md`, `.claude/agents/kiro/` |
-| **Gemini CLI** | ✅ Full | `cc-sdd-gemini` | 11 commands | `GEMINI.md` |
-| **Cursor IDE** | ✅ Full | `cc-sdd-cursor` | 11 commands | `AGENTS.md` |
-| **Codex CLI** | ✅ Full | `cc-sdd-codex` | 11 prompts | `AGENTS.md` |
-| **GitHub Copilot** | ✅ Full | `cc-sdd-copilot` | 11 prompts | `AGENTS.md` |
-| **Qwen Code** | ✅ Full | `cc-sdd-qwen` | 11 commands | `QWEN.md` |
-| Others | 📅 Planned | - | - | - |
- 
+| Agent | Status | Distribution | Commands | Docs |
+|-------|--------|--------------|----------|------|
+| **Claude Code** | ✅ Full | Claude marketplace plugin `cc-sdd-claude-code` (or CLI `npx cc-sdd@latest --claude`) | 11 slash commands | `CLAUDE.md` |
+| **Claude Code SubAgents** | ✅ Full | CLI `npx cc-sdd@latest --claude-agent` | 12 commands + 9 subagents | `CLAUDE.md`, `.claude/agents/kiro/` |
+| **Gemini CLI** | ✅ Full | CLI `npx cc-sdd@latest --gemini` | 11 commands | `GEMINI.md` |
+| **Cursor IDE** | ✅ Full | CLI `npx cc-sdd@latest --cursor` | 11 commands | `AGENTS.md` |
+| **Codex CLI** | ✅ Full | CLI `npx cc-sdd@latest --codex` | 11 prompts | `AGENTS.md` |
+| **GitHub Copilot** | ✅ Full | CLI `npx cc-sdd@latest --copilot` | 11 prompts | `AGENTS.md` |
+| **Qwen Code** | ✅ Full | CLI `npx cc-sdd@latest --qwen` | 11 commands | `QWEN.md` |
+| **Windsurf IDE** | ✅ Full | CLI `npx cc-sdd@latest --windsurf` | 11 workflows | `AGENTS.md` |
+| Others (Factory AI Droid) | 📅 Planned | - | - | - |
 ## 📋 Commands
 
 ### Spec-Driven Development Workflow (Specs Methodology)
@@ -254,15 +253,12 @@ project/
 │   ├── .claude-plugin/plugin.json          # Plugin metadata
 │   ├── commands/                           # 11 slash commands
 │   └── .claude-plugin/settings/            # Rules & templates
-├── .claude/plugins/cc-sdd-claude-agent/    # Claude SubAgents plugin
-│   ├── .claude-plugin/plugin.json
-│   ├── commands/                           # 12 commands
-│   ├── agents/                             # 9 subagents
-│   └── .claude-plugin/settings/
 ├── .kiro/specs/                            # Feature specifications
 ├── .kiro/steering/                         # AI guidance rules
 └── CLAUDE.md                                # Project configuration
 ```
+
+> SubAgents and the other agent workflows continue to install via the CLI (`npx cc-sdd ...`) until their marketplace plugins are released.
 
 ### Traditional CLI Installation Structure
 
