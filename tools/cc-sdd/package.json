@@ -20,7 +20,8 @@
     "test:watch": "vitest -w",
     "build": "tsc -p .",
     "postbuild": "node ./scripts/add-shebang.mjs",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "build:plugin:claude-code": "npm run build && node ./dist/cli.js --manifest templates/manifests/claude-code-plugin.json --overwrite=force --lang en --claude-code --yes"
   },
   "files": [
     "dist",

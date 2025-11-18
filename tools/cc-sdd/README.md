@@ -278,6 +278,27 @@ project/
 
 > Note: only the directories for the agent(s) you install will be created. The tree above shows the full superset for reference.
 
+## Development: syncing Claude Code plugin assets
+
+The Claude Code plugin (`plugins/cc-sdd-claude-code`) now uses the `tools/cc-sdd` templates as its single source of truth.
+
+- Edit command prompts in `tools/cc-sdd/templates/agents/claude-code/commands`.
+- Edit agent library prompts in `tools/cc-sdd/templates/agents/claude-code-agent/agents`.
+- Edit the shared Claude documentation in `tools/cc-sdd/templates/agents/claude-code/docs/CLAUDE.md`.
+- From `tools/cc-sdd`, run:
+
+  ```bash
+  npm run build:plugin:claude-code
+  ```
+
+This regenerates:
+
+- `plugins/cc-sdd-claude-code/commands/*.md`
+- `plugins/cc-sdd-claude-code/agents/*.md`
+- `plugins/cc-sdd-claude-code/CLAUDE.md`
+
+so plugin assets stay in sync with the core templates.
+
 ## 📚 Documentation & Support
 
 - Command Reference: [English](../../docs/guides/command-reference.md) | [日本語](../../docs/guides/ja/command-reference.md)

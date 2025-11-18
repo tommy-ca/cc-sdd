@@ -2,6 +2,31 @@
 
 Kiro-style Spec Driven Development implementation on AI-DLC (AI Development Life Cycle)
 
+## Installation
+
+### Marketplace Installation (Recommended)
+
+```bash
+# Add the cc-sdd marketplace
+claude /plugin marketplace add https://github.com/gotalab/cc-sdd
+
+# Install the Claude Code plugin
+claude /plugin install cc-sdd-claude-code
+
+# Initialize settings and templates (run once)
+claude /kiro:setup
+```
+
+### Alternative: Traditional CLI Installation
+
+For full project setup with all features:
+
+```bash
+npx cc-sdd@latest --claude-code
+```
+
+> **Note**: The `/kiro:setup` command copies required templates and rules to your project. Run it once after marketplace installation.
+
 ## Project Context
 
 ### Paths
@@ -43,3 +68,20 @@ Kiro-style Spec Driven Development implementation on AI-DLC (AI Development Life
 - Load entire `{{KIRO_DIR}}/steering/` as project memory
 - Default files: `product.md`, `tech.md`, `structure.md`
 - Custom files are supported (managed via `/kiro:steering-custom`)
+
+## Troubleshooting
+
+### Setup Issues
+- **Command not found**: Ensure `/kiro:setup` completed successfully
+- **Settings not found**: Run `/kiro:setup` to initialize project templates
+- **Permission errors**: Check write permissions in project directory
+
+### Workflow Issues
+- **Spec commands fail**: Verify `{{KIRO_DIR}}/settings/` exists (run `/kiro:setup`)
+- **Agent not responding**: Check agent permissions and tool access
+- **Template errors**: Ensure all required template files are present
+
+### Getting Help
+- Check `{{KIRO_DIR}}/specs/` for active specifications
+- Use `/kiro:spec-status [feature-name]` to check progress
+- Review steering files in `{{KIRO_DIR}}/steering/` for context

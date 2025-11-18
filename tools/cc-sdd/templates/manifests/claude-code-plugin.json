@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "artifacts": [
+    {
+      "id": "claude_code_plugin_commands",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/agents/claude-code/commands",
+        "toDir": "../../plugins/cc-sdd-claude-code/commands"
+      }
+    },
+    {
+      "id": "claude_code_plugin_agents_library",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/agents/claude-code-agent/agents",
+        "toDir": "../../plugins/cc-sdd-claude-code/agents"
+      }
+    },
+    {
+      "id": "claude_code_plugin_doc_main",
+      "source": {
+        "type": "templateFile",
+        "from": "templates/agents/claude-code/docs/CLAUDE.md",
+        "toDir": "../../plugins/cc-sdd-claude-code",
+        "rename": "CLAUDE.md"
+      }
+    }
+  ]
+}
+
