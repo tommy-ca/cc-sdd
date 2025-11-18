@@ -27,12 +27,12 @@ You will receive task prompts containing:
 - Domain/topic (e.g., "API standards", "testing approach")
 - File path patterns (NOT expanded file lists)
 
-### Step 0: Expand File Patterns (SubAgent-specific)
+### Step 0: Expand File Patterns (Subagent-specific)
 
 Use Glob tool to expand file patterns, then read all files:
-- Glob(`{{KIRO_DIR}}/settings/templates/steering-custom/*.md`) to find available templates
+- Glob(`.kiro/settings/templates/steering-custom/*.md`) to find available templates
 - Read matching template if available
-- Read steering principles: `{{KIRO_DIR}}/settings/rules/steering-principles.md`
+- Read steering principles: `.kiro/settings/rules/steering-principles.md`
 
 ### Core Task (from original instructions)
 
@@ -43,7 +43,7 @@ Use Glob tool to expand file patterns, then read all files:
    - Specific requirements or patterns to document
 
 2. **Check if template exists**:
-   - Load from `{{KIRO_DIR}}/settings/templates/steering-custom/{name}.md` if available
+   - Load from `.kiro/settings/templates/steering-custom/{name}.md` if available
    - Use as starting point, customize based on project
 
 3. **Analyze codebase** (JIT) for relevant patterns:
@@ -53,15 +53,15 @@ Use Glob tool to expand file patterns, then read all files:
 
 4. **Generate custom steering**:
    - Follow template structure if available
-   - Apply principles from `{{KIRO_DIR}}/settings/rules/steering-principles.md`
+   - Apply principles from `.kiro/settings/rules/steering-principles.md`
    - Focus on patterns, not exhaustive lists
    - Keep to 100-200 lines (2-3 minute read)
 
-5. **Create file** in `{{KIRO_DIR}}/steering/{name}.md`
+5. **Create file** in `.kiro/steering/{name}.md`
 
 ## Available Templates
 
-Templates available in `{{KIRO_DIR}}/settings/templates/steering-custom/`:
+Templates available in `.kiro/settings/templates/steering-custom/`:
 
 1. **api-standards.md** - REST/GraphQL conventions, error handling
 2. **testing.md** - Test organization, mocking, coverage
@@ -75,7 +75,7 @@ Load template when needed, customize for project.
 
 ## Steering Principles
 
-From `{{KIRO_DIR}}/settings/rules/steering-principles.md`:
+From `.kiro/settings/rules/steering-principles.md`:
 
 - **Patterns over lists**: Document patterns, not every file/component
 - **Single domain**: One topic per file
@@ -100,7 +100,7 @@ Chat summary with file location (file created directly).
 ✅ Custom Steering Created
 
 ## Created:
-- {{KIRO_DIR}}/steering/api-standards.md
+- .kiro/steering/api-standards.md
 
 ## Based On:
 - Template: api-standards.md
@@ -140,6 +140,8 @@ Review and customize as needed.
 - Follow same granularity principles as core steering
 - All steering files loaded as project memory
 - Custom files equally important as core files
+- Avoid documenting agent-specific tooling directories (e.g. `.cursor/`, `.gemini/`, `.claude/`)
+- Light references to `.kiro/specs/` and `.kiro/steering/` are acceptable; avoid other `.kiro/` directories
 
 **Note**: You execute tasks autonomously. Return final report only when complete.
 think deeply
