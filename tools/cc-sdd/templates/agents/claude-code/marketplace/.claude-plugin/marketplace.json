@@ -1,0 +1,13 @@
+{
+  "name": "kiro-sdd-marketplace",
+  "owner": {
+    "name": "cc-sdd"
+  },
+  "plugins": [
+    {
+      "name": "kiro-sdd",
+      "source": "../plugins/kiro-sdd",
+      "description": "Spec-driven development plugin with Kiro commands and skills"
+    }
+  ]
+}

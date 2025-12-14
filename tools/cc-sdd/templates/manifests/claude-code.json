@@ -37,6 +37,42 @@
         "toDir": "{{KIRO_DIR}}/skills"
       },
       "when": { "agent": "claude-code" }
+    },
+    {
+      "id": "plugin_base",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/agents/{{AGENT}}/plugin",
+        "toDir": "{{KIRO_DIR}}/plugins/kiro-sdd"
+      },
+      "when": { "agent": "claude-code" }
+    },
+    {
+      "id": "plugin_commands",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/agents/{{AGENT}}/commands",
+        "toDir": "{{KIRO_DIR}}/plugins/kiro-sdd/commands"
+      },
+      "when": { "agent": "claude-code" }
+    },
+    {
+      "id": "plugin_skills",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "{{KIRO_DIR}}/plugins/kiro-sdd/skills"
+      },
+      "when": { "agent": "claude-code" }
+    },
+    {
+      "id": "plugin_marketplace",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/agents/{{AGENT}}/marketplace",
+        "toDir": "{{KIRO_DIR}}/marketplace"
+      },
+      "when": { "agent": "claude-code" }
     }
   ]
 }

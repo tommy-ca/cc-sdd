@@ -1,0 +1,10 @@
+{
+  "name": "kiro-sdd",
+  "description": "Spec-driven development plugin with Kiro steering, requirements, design, tasks, validation, and skills for Claude Code.",
+  "version": "0.1.0",
+  "author": {
+    "name": "cc-sdd"
+  },
+  "homepage": "https://github.com/gotalab/cc-sdd",
+  "license": "MIT"
+}
