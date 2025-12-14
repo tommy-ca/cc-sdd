@@ -28,6 +28,15 @@
         "toDir": "{{KIRO_DIR}}/settings"
       },
       "when": { "agent": "codex" }
+    },
+    {
+      "id": "skills",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "{{KIRO_DIR}}/skills"
+      },
+      "when": { "agent": "codex" }
     }
   ]
 }
