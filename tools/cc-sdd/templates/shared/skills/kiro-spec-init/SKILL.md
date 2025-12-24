@@ -1,9 +1,13 @@
 ---
 name: kiro-spec-init
 description: Initialize a new Kiro specification from a project description
-allowed-tools: Bash Read Write Glob
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Glob
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "init"
   outputs: "{{KIRO_DIR}}/specs/<feature>/spec.json,requirements.md"
 ---

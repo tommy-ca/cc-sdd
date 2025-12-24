@@ -1,9 +1,20 @@
 ---
 name: kiro-spec-design
 description: Produce technical design from approved requirements and steering context
-allowed-tools: Bash Glob Grep LS Read Write Edit MultiEdit Update WebSearch WebFetch
+allowed-tools:
+  - Bash
+  - Glob
+  - Grep
+  - LS
+  - Read
+  - Write
+  - Edit
+  - MultiEdit
+  - Update
+  - WebSearch
+  - WebFetch
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "design"
   inputs: "spec name"
   outputs: "{{KIRO_DIR}}/specs/<feature>/design.md,spec.json approvals"

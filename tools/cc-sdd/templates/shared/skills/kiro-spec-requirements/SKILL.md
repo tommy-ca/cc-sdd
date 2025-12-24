@@ -1,9 +1,20 @@
 ---
 name: kiro-spec-requirements
 description: Generate EARS-style requirements for a Kiro specification
-allowed-tools: Bash Glob Grep LS Read Write Edit MultiEdit Update WebSearch WebFetch
+allowed-tools:
+  - Bash
+  - Glob
+  - Grep
+  - LS
+  - Read
+  - Write
+  - Edit
+  - MultiEdit
+  - Update
+  - WebSearch
+  - WebFetch
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "requirements"
   inputs: "spec name"
   outputs: "{{KIRO_DIR}}/specs/<feature>/requirements.md,spec.json updates"

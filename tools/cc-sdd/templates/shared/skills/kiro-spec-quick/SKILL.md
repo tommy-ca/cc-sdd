@@ -1,9 +1,15 @@
 ---
 name: kiro-spec-quick
 description: Quick spec generation with interactive or automatic mode
-allowed-tools: Read SlashCommand TodoWrite Bash Write Glob
+allowed-tools:
+  - Read
+  - SlashCommand
+  - TodoWrite
+  - Bash
+  - Write
+  - Glob
 metadata:
-  agents: "claude-code-agent"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "spec"
   outputs: "{{KIRO_DIR}}/specs/<feature>/spec.json,requirements.md,design.md,tasks.md"
 ---

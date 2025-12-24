@@ -1,9 +1,16 @@
 ---
 name: kiro-spec-status
 description: Report specification status and next actions
-allowed-tools: Bash Read Glob Write Edit MultiEdit Update
+allowed-tools:
+  - Bash
+  - Read
+  - Glob
+  - Write
+  - Edit
+  - MultiEdit
+  - Update
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "status"
   inputs: "spec name"
   outputs: "status report"

@@ -1,9 +1,12 @@
 ---
 name: kiro-validate-design
 description: Review technical design quality and readiness for implementation
-allowed-tools: Read Glob Grep
+allowed-tools:
+  - Read
+  - Glob
+  - Grep
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "validation"
   inputs: "spec name"
   outputs: "design review summary"

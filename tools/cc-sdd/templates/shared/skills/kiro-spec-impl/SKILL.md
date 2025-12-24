@@ -1,9 +1,19 @@
 ---
 name: kiro-spec-impl
 description: Execute implementation tasks with TDD based on approved specs
-allowed-tools: Bash Read Write Edit MultiEdit Grep Glob LS WebFetch WebSearch
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - MultiEdit
+  - Grep
+  - Glob
+  - LS
+  - WebFetch
+  - WebSearch
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "implementation"
   inputs: "spec name, optional task numbers"
   outputs: "code changes, tests, tasks.md updates"

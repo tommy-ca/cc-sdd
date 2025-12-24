@@ -1,9 +1,18 @@
 ---
 name: kiro-validate-gap
 description: Analyze implementation gap between requirements and existing codebase
-allowed-tools: Bash Glob Grep Read Write Edit MultiEdit WebSearch WebFetch
+allowed-tools:
+  - Bash
+  - Glob
+  - Grep
+  - Read
+  - Write
+  - Edit
+  - MultiEdit
+  - WebSearch
+  - WebFetch
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "discovery"
   inputs: "spec name"
   outputs: "gap analysis notes in research.md"

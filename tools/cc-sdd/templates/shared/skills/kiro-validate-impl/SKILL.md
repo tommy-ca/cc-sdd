@@ -1,9 +1,14 @@
 ---
 name: kiro-validate-impl
 description: Validate implementation against requirements, design, and tasks
-allowed-tools: Bash Glob Grep Read LS
+allowed-tools:
+  - Bash
+  - Glob
+  - Grep
+  - Read
+  - LS
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "validation"
   inputs: "spec name, optional task numbers"
   outputs: "validation summary, tasks.md updates"

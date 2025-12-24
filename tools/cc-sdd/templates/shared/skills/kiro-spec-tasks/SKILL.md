@@ -1,9 +1,15 @@
 ---
 name: kiro-spec-tasks
 description: Generate implementation tasks from approved requirements and design
-allowed-tools: Read Write Edit MultiEdit Glob Grep
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - MultiEdit
+  - Glob
+  - Grep
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   phase: "tasks"
   inputs: "spec name"
   outputs: "{{KIRO_DIR}}/specs/<feature>/tasks.md,spec.json approvals"

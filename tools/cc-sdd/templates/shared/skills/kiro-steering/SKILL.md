@@ -1,9 +1,17 @@
 ---
 name: kiro-steering
 description: Maintain steering documents as persistent project knowledge
-allowed-tools: Bash Read Write Edit MultiEdit Glob Grep LS
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - MultiEdit
+  - Glob
+  - Grep
+  - LS
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   category: "steering"
   outputs: "{{KIRO_DIR}}/steering/*"
 ---

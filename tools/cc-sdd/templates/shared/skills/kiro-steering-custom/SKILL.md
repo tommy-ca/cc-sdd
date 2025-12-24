@@ -1,9 +1,17 @@
 ---
 name: kiro-steering-custom
 description: Create and maintain custom steering documents for specialized contexts
-allowed-tools: Bash Read Write Edit MultiEdit Glob Grep LS
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - MultiEdit
+  - Glob
+  - Grep
+  - LS
 metadata:
-  agents: "claude-code,codex"
+  agents: "claude-code,claude-code-agent,codex,cursor,gemini-cli,github-copilot,qwen-code,windsurf"
   category: "steering"
   outputs: "{{KIRO_DIR}}/steering/custom-*"
 ---
