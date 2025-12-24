@@ -9,6 +9,10 @@ Project memory keeps persistent guidance (steering, specs notes, component docs)
 - Use local `AGENTS.md` files for feature or library context (e.g. `src/lib/payments/AGENTS.md`): describe domain assumptions, API contracts, or testing conventions specific to that folder. Codex auto-loads these when working in the matching path.
 - Specs notes stay with each spec (under `{{KIRO_DIR}}/specs/`) to guide specification-level workflows.
 
+## Skills
+Kiro commands are thin wrappers around skills. Skills live in `skills/` (preferred) and are also copied to `{{KIRO_DIR}}/skills/` for compatibility.
+- Command wrappers load the matching skill (for example, `skills/kiro-spec-init/SKILL.md`) and follow it exactly.
+
 ## Project Context
 
 ### Paths

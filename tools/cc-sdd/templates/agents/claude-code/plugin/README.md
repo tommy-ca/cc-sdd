@@ -19,5 +19,6 @@ Spec-driven development workflows for Claude Code: steering, requirements, desig
 3) Restart Claude Code, then run `/help` or try `/kiro:spec-init`.
 
 ## Notes
-- Commands and skills align with the shared Kiro templates installed under `.claude/commands/kiro` and `.kiro/skills`.
+- Commands are thin wrappers around skills; the canonical skills live under `skills/` with a compatibility copy in `.kiro/skills`.
+- Plugin commands and skills align with the shared Kiro templates installed under `.claude/commands/kiro`.
 - Plugin is self-contained for marketplace publishing; update version in `plugin.json` when shipping changes.

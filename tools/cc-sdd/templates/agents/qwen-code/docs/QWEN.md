@@ -17,6 +17,10 @@ Kiro-style Spec Driven Development implementation on AI-DLC (AI Development Life
 - Check `.kiro/specs/` for active specifications
 - Use `/kiro:spec-status [feature-name]` to check progress
 
+## Skills
+Kiro commands are thin wrappers around skills. Skills live in `skills/` (preferred) and are also copied to `.kiro/skills/` for compatibility.
+- Command wrappers load the matching skill (for example, `skills/kiro-spec-init/SKILL.md`) and follow it exactly.
+
 ## Development Guidelines
 {{DEV_GUIDELINES}}
 

@@ -206,7 +206,9 @@ project/
 ├── .codex/prompts/           # 11 prompt commands (Codex CLI)
 ├── .github/prompts/          # 11 prompt commands (GitHub Copilot)
 ├── .windsurf/workflows/      # 11 workflow files (Windsurf IDE)
+├── skills/                   # Agent skills (canonical)
 ├── .kiro/settings/           # Shared rules & templates (variables resolved with {{KIRO_DIR}})
+├── .kiro/skills/             # Agent skills (compatibility copy)
 ├── .kiro/specs/              # Feature specifications
 ├── .kiro/steering/           # AI guidance rules
 └── CLAUDE.md (Claude Code)    # Project configuration
