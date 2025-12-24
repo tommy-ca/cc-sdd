@@ -32,8 +32,13 @@ const parseFrontmatter = (content: string): ParsedFrontmatter => {
       if (key === 'name') out.name = value;
       if (key === 'description') out.description = value;
       if (key === 'allowed-tools') {
+        const trimmed = value.trim();
         out.allowedTools = [];
-        currentList = 'allowed-tools';
+        if (trimmed) {
+          out.allowedTools = trimmed.split(/\s+/);
+        } else {
+          currentList = 'allowed-tools';
+        }
       }
       continue;
     }

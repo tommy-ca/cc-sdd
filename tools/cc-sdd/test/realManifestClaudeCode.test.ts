@@ -61,6 +61,9 @@ describe('real claude-code manifest', () => {
     const settingsRule = join(cwd, '.kiro/settings/rules/design-principles.md');
     expect(await exists(settingsRule)).toBe(true);
 
+    const skill = join(cwd, 'skills/kiro-spec-init/SKILL.md');
+    expect(await exists(skill)).toBe(true);
+
     expect(ctx.logs.join('\n')).toMatch(/Setup completed: written=\d+, skipped=\d+/);
   });
 });
@@ -96,6 +99,9 @@ describe('real claude-code manifest (linux)', () => {
 
     const settingsTemplate = join(cwd, '.kiro/settings/templates/specs/init.json');
     expect(await exists(settingsTemplate)).toBe(true);
+
+    const skill = join(cwd, 'skills/kiro-spec-init/SKILL.md');
+    expect(await exists(skill)).toBe(true);
 
     expect(ctx.logs.join('\n')).toMatch(/Setup completed: written=\d+, skipped=\d+/);
   });

@@ -21,6 +21,7 @@ describe('claude-code plugin artifacts', () => {
 
     const ids = artifacts.map((a) => a.id);
     expect(ids).toContain('skills');
+    expect(ids).toContain('skills_root');
     expect(ids).toContain('plugin_base');
     expect(ids).toContain('plugin_commands');
     expect(ids).toContain('plugin_skills');
@@ -47,6 +48,11 @@ describe('claude-code plugin artifacts', () => {
       type: 'templateDir',
       fromDir: 'templates/agents/claude-code/marketplace',
       toDir: '.kiro/marketplace',
+    });
+    expect(get('skills_root')?.source).toEqual({
+      type: 'templateDir',
+      fromDir: 'templates/shared/skills',
+      toDir: 'skills',
     });
   });
 });
