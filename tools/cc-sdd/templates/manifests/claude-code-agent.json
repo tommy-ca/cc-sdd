@@ -8,7 +8,9 @@
         "fromDir": "templates/agents/{{AGENT}}/commands",
         "toDir": "{{AGENT_COMMANDS_DIR}}"
       },
-      "when": { "agent": "claude-code-agent" }
+      "when": {
+        "agent": "claude-code-agent"
+      }
     },
     {
       "id": "doc_main",
@@ -18,7 +20,9 @@
         "toDir": ".",
         "rename": "{{AGENT_DOC}}"
       },
-      "when": { "agent": "claude-code-agent" }
+      "when": {
+        "agent": "claude-code-agent"
+      }
     },
     {
       "id": "agents_library",
@@ -27,7 +31,9 @@
         "fromDir": "templates/agents/{{AGENT}}/agents",
         "toDir": "{{AGENT_DIR}}/agents/kiro"
       },
-      "when": { "agent": "claude-code-agent" }
+      "when": {
+        "agent": "claude-code-agent"
+      }
     },
     {
       "id": "settings_common",
@@ -36,7 +42,31 @@
         "fromDir": "templates/shared/settings",
         "toDir": "{{KIRO_DIR}}/settings"
       },
-      "when": { "agent": "claude-code-agent" }
+      "when": {
+        "agent": "claude-code-agent"
+      }
+    },
+    {
+      "id": "skills",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "{{KIRO_DIR}}/skills"
+      },
+      "when": {
+        "agent": "claude-code-agent"
+      }
+    },
+    {
+      "id": "skills_root",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "skills"
+      },
+      "when": {
+        "agent": "claude-code-agent"
+      }
     }
   ]
 }

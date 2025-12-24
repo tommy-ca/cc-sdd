@@ -8,7 +8,9 @@
         "fromDir": "templates/agents/gemini-cli/commands",
         "toDir": "{{AGENT_COMMANDS_DIR}}"
       },
-      "when": { "agent": "qwen-code" }
+      "when": {
+        "agent": "qwen-code"
+      }
     },
     {
       "id": "doc_main",
@@ -18,7 +20,9 @@
         "toDir": ".",
         "rename": "{{AGENT_DOC}}"
       },
-      "when": { "agent": "qwen-code" }
+      "when": {
+        "agent": "qwen-code"
+      }
     },
     {
       "id": "settings_common",
@@ -27,7 +31,31 @@
         "fromDir": "templates/shared/settings",
         "toDir": "{{KIRO_DIR}}/settings"
       },
-      "when": { "agent": "qwen-code" }
+      "when": {
+        "agent": "qwen-code"
+      }
+    },
+    {
+      "id": "skills",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "{{KIRO_DIR}}/skills"
+      },
+      "when": {
+        "agent": "qwen-code"
+      }
+    },
+    {
+      "id": "skills_root",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "skills"
+      },
+      "when": {
+        "agent": "qwen-code"
+      }
     }
   ]
 }

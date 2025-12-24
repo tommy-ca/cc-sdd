@@ -8,7 +8,9 @@
         "fromDir": "templates/agents/{{AGENT}}/commands",
         "toDir": "{{AGENT_COMMANDS_DIR}}"
       },
-      "when": { "agent": "gemini-cli" }
+      "when": {
+        "agent": "gemini-cli"
+      }
     },
     {
       "id": "doc_main",
@@ -18,7 +20,9 @@
         "toDir": ".",
         "rename": "{{AGENT_DOC}}"
       },
-      "when": { "agent": "gemini-cli" }
+      "when": {
+        "agent": "gemini-cli"
+      }
     },
     {
       "id": "settings_common",
@@ -27,7 +31,31 @@
         "fromDir": "templates/shared/settings",
         "toDir": "{{KIRO_DIR}}/settings"
       },
-      "when": { "agent": "gemini-cli" }
+      "when": {
+        "agent": "gemini-cli"
+      }
+    },
+    {
+      "id": "skills",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "{{KIRO_DIR}}/skills"
+      },
+      "when": {
+        "agent": "gemini-cli"
+      }
+    },
+    {
+      "id": "skills_root",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "skills"
+      },
+      "when": {
+        "agent": "gemini-cli"
+      }
     }
   ]
 }

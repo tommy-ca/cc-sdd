@@ -8,7 +8,9 @@
         "fromDir": "templates/agents/{{AGENT}}/commands",
         "toDir": "{{AGENT_COMMANDS_DIR}}"
       },
-      "when": { "agent": "cursor" }
+      "when": {
+        "agent": "cursor"
+      }
     },
     {
       "id": "doc_main",
@@ -18,7 +20,9 @@
         "toDir": ".",
         "rename": "{{AGENT_DOC}}"
       },
-      "when": { "agent": "cursor" }
+      "when": {
+        "agent": "cursor"
+      }
     },
     {
       "id": "settings_common",
@@ -27,7 +31,31 @@
         "fromDir": "templates/shared/settings",
         "toDir": "{{KIRO_DIR}}/settings"
       },
-      "when": { "agent": "cursor" }
+      "when": {
+        "agent": "cursor"
+      }
+    },
+    {
+      "id": "skills",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "{{KIRO_DIR}}/skills"
+      },
+      "when": {
+        "agent": "cursor"
+      }
+    },
+    {
+      "id": "skills_root",
+      "source": {
+        "type": "templateDir",
+        "fromDir": "templates/shared/skills",
+        "toDir": "skills"
+      },
+      "when": {
+        "agent": "cursor"
+      }
     }
   ]
 }
